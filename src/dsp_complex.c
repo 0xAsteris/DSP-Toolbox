@@ -37,7 +37,7 @@ float c_abs(comp_t z) {
 float c_arg(comp_t z) {
     return atan2f(z.im, z.re);
 }         
-
+// 1 / z --- implement Kahan's complex division algorithm
 comp_t c_inv(comp_t z) {
     if (fabsf(z.re) >= fabsf(z.im)) {
         float r = z.im / z.re;

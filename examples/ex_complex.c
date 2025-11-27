@@ -13,9 +13,9 @@ int main(void) {
     float arg3 = c_arg(z3);         // arg(z3)
     float abs2 = c_abs(z2);         // |z2|
     
-    printf("z1 + z2 = %f + j%f\n"
-        "z2 * z3 = %f + j%f\n"
-        "1 / z2 = %f + j%f\n"
+    printf("z1 + z2 = %f + %fj\n"
+        "z2 * z3 = %f + %fj\n"
+        "1 / z2 = %f + %fj\n"
         "arg(z3) = %f (rad)\n"
         "abs(z2) = %f\n",
         z4.re, z4.im, z5.re, z5.im, z6.re, z6.im, arg3, abs2);

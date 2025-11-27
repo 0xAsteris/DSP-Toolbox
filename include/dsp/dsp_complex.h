@@ -1,6 +1,11 @@
 #ifndef __DSP_COMPLEX_H__
 #define __DSP_COMPLEX_H__
 
+/*  
+    dsp/dsp_complex.h
+    basic complex arithmetic header
+*/
+
 #ifdef __cplusplus
 extern "C" {
 #endif

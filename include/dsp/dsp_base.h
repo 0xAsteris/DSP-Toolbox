@@ -2,7 +2,7 @@
 #define __DSP_BASE_H__
 
 /*  
-    dsp/base.h
+    dsp/dsp_base.h
     core constants and macros shared across the DSP toolkit.
 */
 
@@ -29,4 +29,4 @@
 #define DSP_MAX(a,b) (( (a) > (b) ) ? (a) : (b))
 #define DSP_CLAMP(x,lo,hi) (DSP_MAX((lo), DSP_MIN((x), (hi))))
 
-#endif
+#endif  // __DSP_BASE_H__
