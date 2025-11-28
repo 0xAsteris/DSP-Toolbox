@@ -29,4 +29,14 @@
 #define DSP_MAX(a,b) (( (a) > (b) ) ? (a) : (b))
 #define DSP_CLAMP(x,lo,hi) (DSP_MAX((lo), DSP_MIN((x), (hi))))
 
+typedef enum {
+    DSP_OK = 0,
+    DSP_ERR_BADARG = 1,     // unwanted argument
+    DSP_ERR_NULL = 2,       // unwanted null pointer 
+    DSP_ERR_SIZE = 3,       // size mismatch error
+    DSP_ERR_OOM = 4,        // alloc fail
+    DSP_ERR_RANGE = 5,      // legal range mismatch
+    DSP_ERR_UNSUPPORTED = 6
+} dsp_err_t;
+
 #endif  // __DSP_BASE_H__

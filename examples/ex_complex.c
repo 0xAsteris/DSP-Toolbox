@@ -2,16 +2,16 @@
 #include <stdio.h>
 
 int main(void) {
-    comp_t z1 = c_make(1.0f, 2.0f);
-    comp_t z2 = c_make_pol(3.2f, DSP_PI / 4.0f);
-    comp_t z3 = c_make_uc(DSP_PI / 3.0f);
+    cplx_t z1 = cplx_make(1.0f, 2.0f);
+    cplx_t z2 = cplx_make_pol(3.2f, DSP_PI / 4.0f);
+    cplx_t z3 = cplx_make_uc(DSP_PI / 3.0f);
     
-    comp_t z4 = c_add(z1, z2);      // z1 + z2
-    comp_t z5 = c_mul(z2, z3);      // z2 * z3
-    comp_t z6 = c_inv(z2);          // 1 / z2
+    cplx_t z4 = cplx_add(z1, z2);      // z1 + z2
+    cplx_t z5 = cplx_mul(z2, z3);      // z2 * z3
+    cplx_t z6 = cplx_inv(z2);          // 1 / z2
     
-    float arg3 = c_arg(z3);         // arg(z3)
-    float abs2 = c_abs(z2);         // |z2|
+    float arg3 = cplx_arg(z3);         // arg(z3)
+    float abs2 = cplx_abs(z2);         // |z2|
     
     printf("z1 + z2 = %f + %fj\n"
         "z2 * z3 = %f + %fj\n"

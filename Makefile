@@ -3,15 +3,15 @@ CFLAGS = -O3 -Iinclude -Wall -Wextra
 AR = ar
 ARFLAGS = rcs
 
-SRC = $(wildcard src/*.c)
-OBJ = $(patsubst src/%.c, build/%.o, $(SRC))
+SRC = $(wildcard src/reference/*.c)
+OBJ = $(patsubst src/reference/%.c, build/%.o, $(SRC))
 
 lib: build/libdsp.a
 
 build/libdsp.a: $(OBJ)
 	$(AR) $(ARFLAGS) $@ $^
 
-build/%.o: src/%.c
+build/%.o: src/reference/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 examples/ex_complex: examples/ex_complex.c build/libdsp.a
